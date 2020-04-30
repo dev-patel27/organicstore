@@ -1,0 +1,87 @@
+[class*=" imghvr-"], [class^=imghvr-] {
+position:relative;
+display:inline-block;
+margin:0;
+max-width:100%;
+background-color:#0f1b2c;
+color:#fff;
+overflow:hidden;
+-webkit-backface-visibility:hidden;
+backface-visibility:hidden;
+-moz-osx-font-smoothing:grayscale;
+transform:translateZ(0);
+}
+[class*=" imghvr-"]>img, [class^=imghvr-]>img {
+vertical-align:top;
+max-width:100%
+}
+[class*=" imghvr-"] figcaption, [class^=imghvr-] figcaption {
+padding:30px;
+position:absolute;
+top:0;
+bottom:0;
+left:0;
+right:0;
+color:#fff
+}
+ [class*=" imghvr-"], [class*=" imghvr-"] *, [class*=" imghvr-"]:after, [class*=" imghvr-"] :after, [class*=" imghvr-"]:before, [class*=" imghvr-"] :before, [class^=imghvr-], [class^=imghvr-] *, [class^=imghvr-]:after, [class^=imghvr-] :after, [class^=imghvr-]:before, [class^=imghvr-] :before {
+box-sizing:border-box;
+transition:all .35s ease
+}
+[class*=" imghvr-fade"]:hover>img, [class*=" imghvr-fade"] figcaption, [class^=imghvr-fade]:hover>img, [class^=imghvr-fade] figcaption {
+opacity:0
+}
+[class*=" imghvr-fade"]:hover figcaption, [class^=imghvr-fade]:hover figcaption {
+opacity:1
+}
+[class*=" imghvr-fade"]:hover>img, [class*=" imghvr-fade"]:hover figcaption, [class^=imghvr-fade]:hover>img, [class^=imghvr-fade]:hover figcaption {
+transform:translate(0)
+}
+.imghvr-fade-in-right figcaption {
+	transform:translate(15%)
+}
+[class*=" imghvr-push-"]:hover figcaption, [class^=imghvr-push-]:hover figcaption {
+transform:translate(0)
+}
+.imghvr-push-up figcaption {
+	transform:translateY(100%)
+}
+.imghvr-push-down figcaption, .imghvr-push-up:hover>img {
+	transform:translateY(-100%)
+}
+.imghvr-push-down:hover>img {
+	transform:translateY(100%)
+}
+.imghvr-push-left figcaption {
+	transform:translateX(100%)
+}
+.imghvr-push-left:hover>img, .imghvr-push-right figcaption {
+	transform:translateX(-100%)
+}
+.imghvr-push-right:hover>img {
+	transform:translateX(100%)
+}
+[class*=" imghvr-slide-"]:hover figcaption, [class^=imghvr-slide-]:hover figcaption {
+transform:translate(0)
+}
+figcaption p {
+	font-size:14px;
+}
+figcaption h3 {
+font-size:30px;
+margin:10% 0 5% 0;
+letter-spacing:1px
+}
+
+figcaption { background:rgba(0, 0, 0, 0.8);}
+
+
+
+.blog-text h4 > a { font-size:20px; color:#ee7830; font-weight:800;}
+
+@media (max-width:991px){
+figcaption {padding:10px}
+figcaption h3 {font-size:18px; margin:0 0 3% 0;}
+figcaption p { font-size:13px;} 
+}
+

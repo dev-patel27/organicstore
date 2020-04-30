@@ -1,0 +1,57 @@
+/**
+* EasyZoom core styles
+*/
+.easyzoom {
+	position: relative;
+	/* 'Shrink-wrap' the element */
+	display: inline-block;
+*display: inline;
+*zoom: 1;
+}
+.easyzoom img {
+	vertical-align: bottom;
+}
+.easyzoom.is-loading img {
+	cursor: progress;
+}
+.easyzoom.is-ready img {
+	cursor: crosshair;
+}
+.easyzoom.is-error img {
+	cursor: not-allowed;
+}
+.easyzoom-notice {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	z-index: 150;
+	width: 10em;
+	margin: -1em 0 0 -5em;
+	line-height: 2em;
+	text-align: center;
+}
+.easyzoom-flyout {
+	position: absolute;
+	z-index: 100;
+	overflow: hidden;
+}
+/**
+* EasyZoom layout variations
+*/
+.easyzoom--overlay .easyzoom-flyout {
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+.easyzoom img {
+width: auto!important;
+max-width: inherit!important
+}
+.easyzoom--adjacent .easyzoom-flyout {top:0;left:100%;width:100%;height:100%;margin-left:20px;}
+
+#sync2 .owl-next {width:33px!important; height:33px!important; border-radius:100px; text-align:center}
+#sync2 .owl-prev {width:33px!important; height:33px!important; border-radius:100px; text-align:center}
+
+#sync2 .owl-next {font-size:20px}
+#sync2 .owl-prev {font-size:20px}

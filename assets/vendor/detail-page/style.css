@@ -1,0 +1,57 @@
+#sync1 .item {
+padding:0;
+margin:0;
+color:#FFF;
+text-align:center;
+}
+
+#sync2 .item {
+border:solid 2px #fff;
+padding:0;
+margin:0 3px;
+color: #FFF;
+text-align: center;
+cursor: pointer;
+}
+
+.icon-search  {color:#fff}
+#sync2 .current .item { border:solid 2px #fd8605;}
+
+.owl-theme .owl-nav {
+  /*default owl-theme theme reset .disabled:hover links */
+}
+.owl-theme .owl-nav [class*='owl-'] {
+  transition: all .3s ease;
+}
+.owl-theme .owl-nav [class*='owl-'].disabled:hover {
+  background-color: #D6D6D6;
+}
+
+#sync1.owl-theme {
+  position: relative;
+}
+#sync1.owl-theme .owl-next, #sync1.owl-theme .owl-prev {
+  width: 22px;
+  height: 40px;
+  margin-top: -20px;
+  position: absolute;
+  top: 50%;
+}
+#sync1.owl-theme .owl-prev {
+  left: 10px;
+}
+#sync1.owl-theme .owl-next {
+  right: 10px;
+}
+
+#sync1 .owl-item  { border:solid 2px #fff; margin:0 0 5px 0}
+
+ 
+#sync2 .owl-prev  {
+border-radius: 0;
+color: #8b8b8b; left:10px; position: absolute;
+}
+
+
+#sync2 .owl-next  {border-radius:0; color:#8b8b8b; right:10px; position:absolute; top:31%;} 
+#sync2 .owl-prev  {border-radius:0; color:#8b8b8b; right:10px; position:absolute; top:31%;} 

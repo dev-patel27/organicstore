@@ -1,0 +1,33 @@
+/*------------------------------------------------------------------
+[Master Stylesheet]
+Project:    Organic store
+Version:    1.0
+Primary use:    E-commerce Template  
+-------------------------------------------------------------------
+
+[Table of contents]
+1. Body / body
+2. Navbar / .navbar
+3. Header / .header
+5. Latest Products / .products-section 
+6. Featured Products / #featured-products
+7. Bestsellers / #bestsellers
+8. Deal Of The Week / #deal-of-the-week
+9. Partner / .partner
+10. newsletter / .newsletter
+11. footer / #footer
+-------------------------------------------------------------------*/
+@import url('../vendor/bootstrap/css/bootstrap.min.css');
+@import url('font-awesome.min.css');
+@import url('../owlcarousel/owl.carousel.min.css');
+@import url('../owlcarousel/owl.theme.default.min.css');
+@import url('../vendor/slick/slick.css');
+@import url('../vendor/aos.css');
+@import url('style.css');
+@import url('hover-css/style2.css');
+@import url('hover-css/common.css');
+
+@import url('hover-css/imagehover.css');
+
+@import url('responsive.css');
+@import url('../vendor/wow/animate.css');

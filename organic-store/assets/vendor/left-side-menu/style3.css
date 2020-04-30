@@ -1,0 +1,145 @@
+
+
+#sidebar ul li.active>a, a[aria-expanded="true"] {
+color: #fff;
+background: #d85e11;
+}
+#sidebar {
+width: 250px;
+position: fixed;
+top: 0;
+right: -250px;
+height: 100vh;
+z-index:9999;
+background: #f47525;
+color: #fff;
+transition: all 0.3s;
+overflow-y: scroll;
+box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);
+}
+#sidebar.active {
+right: 0;
+}
+#dismiss {
+width: 35px;
+height: 35px;
+line-height: 35px;
+text-align: center;
+background: #f47525;
+position: absolute;
+top: 10px;
+right: 10px;
+cursor: pointer;
+-webkit-transition: all 0.3s;
+-o-transition: all 0.3s;
+transition: all 0.3s;
+}
+#dismiss:hover {
+background: #fff;
+color: #000;
+}
+.overlay {
+display: none;
+position: fixed;
+width: 100vw;
+height: 100vh;
+background: rgba(0, 0, 0, 0.7);
+z-index: 998;
+opacity: 0;
+transition: all 0.5s ease-in-out;
+}
+.overlay.active {
+display: block;
+opacity: 1;
+}
+#sidebar .sidebar-header {
+padding:13px;
+background: #000;
+}
+#sidebar .sidebar-header h3 {
+margin:0;
+padding:0;
+}
+#sidebar ul.components {
+padding:0;
+}
+#sidebar ul p {
+color: #fff;
+padding: 10px;
+}
+#sidebar ul li a {
+padding:14px 15px 14px 15px;
+font-size:15px;
+display: block;
+color:#fff;
+cursor:pointer;
+text-transform:uppercase
+}
+.components li {
+border-bottom:dotted 1px #bb4d08;
+text-align:right
+}
+.components ul {
+margin:0 0 -1px 0;
+background:#ca4c0a!important
+}
+.components ul li {
+border-bottom:solid 1px #de5208;
+}
+.components ul li a {
+font-size:12px!important;
+padding:8px 15px 8px 15px!important;
+}
+#sidebar ul li a:hover {
+color:#fff;
+background:#d85e11;
+}
+#sidebarCollapse {
+color:#000;
+font-size:18px;
+margin:0
+}
+.right-icon {
+margin:20px 0 0 0;
+float:right
+}
+.right-icon a {
+margin:6px 0 0 0;
+display:inline-block
+}
+.round-1 {
+background: #f36e24;
+border-radius: 100px;
+width: 24px;
+height: 24px;
+line-height: 24px;
+display: inline-block;
+text-align: center;
+font-size: 11px;
+color:#fff
+}
+.socil-link {
+text-align:center
+}
+.socil-link a {
+margin:0 2px 2px;
+padding:0;
+background:#fff;
+border-radius:100px;
+font-size:13px;
+width:35px;
+height:35px;
+display:inline-block;
+line-height:35px;
+}
+.socil-link a:hover {
+background:#000;
+}
+
+@media (min-width:992px){
+body {padding-top:80px!important}
+}
+
+@media (max-width:991px){
+body {padding-top:50px!important}
+}

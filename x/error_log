@@ -1,0 +1,49 @@
+[16-Feb-2018 04:36:10 UTC] PHP Parse error:  syntax error, unexpected ''' (T_ENCAPSED_AND_WHITESPACE) in /home/windzoonin/public_html/crypto/application/x/controllers/Ajax.php on line 2080
+[16-Feb-2018 05:57:10 UTC] PHP Parse error:  syntax error, unexpected ''categ' (T_ENCAPSED_AND_WHITESPACE), expecting ']' in /home/windzoonin/public_html/crypto/application/x/controllers/Ajax.php on line 699
+[16-Feb-2018 06:03:41 UTC] PHP Parse error:  syntax error, unexpected end of file in /home/windzoonin/public_html/crypto/application/x/controllers/Ajax.php on line 1381
+[16-Feb-2018 06:09:00 UTC] PHP Parse error:  syntax error, unexpected '->' (T_OBJECT_OPERATOR), expecting identifier (T_STRING) or variable (T_VARIABLE) or '{' or '$' in /home/windzoonin/public_html/crypto/application/x/controllers/Ticket.php on line 124
+[16-Feb-2018 06:09:35 UTC] PHP Parse error:  syntax error, unexpected '->' (T_OBJECT_OPERATOR), expecting identifier (T_STRING) or variable (T_VARIABLE) or '{' or '$' in /home/windzoonin/public_html/crypto/application/x/controllers/Ticket.php on line 124
+[16-Feb-2018 06:37:42 UTC] PHP Parse error:  syntax error, unexpected '' 00:00:00"' (T_ENCAPSED_AND_WHITESPACE) in /home/windzoonin/public_html/crypto/application/x/controllers/Ajax.php on line 1055
+[16-Feb-2018 06:48:27 UTC] PHP Parse error:  syntax error, unexpected '' 00:00:00"' (T_ENCAPSED_AND_WHITESPACE) in /home/windzoonin/public_html/crypto/application/x/controllers/Ajax.php on line 1055
+[16-Feb-2018 07:01:07 UTC] PHP Fatal error:  Cannot redeclare Ticket::inbox_unapprove() in /home/windzoonin/public_html/crypto/application/x/controllers/Ticket.php on line 202
+[16-Feb-2018 07:01:23 UTC] PHP Fatal error:  Cannot redeclare Ticket::inbox_unapprove() in /home/windzoonin/public_html/crypto/application/x/controllers/Ticket.php on line 202
+[16-Feb-2018 07:01:25 UTC] PHP Fatal error:  Cannot redeclare Ticket::inbox_unapprove() in /home/windzoonin/public_html/crypto/application/x/controllers/Ticket.php on line 202
+[16-Feb-2018 09:26:00 UTC] PHP Parse error:  syntax error, unexpected '$route' (T_VARIABLE) in /home/windzoonin/public_html/crypto/application/x/config/routes.php on line 284
+[16-Feb-2018 09:26:24 UTC] PHP Parse error:  syntax error, unexpected '$route' (T_VARIABLE) in /home/windzoonin/public_html/crypto/application/x/config/routes.php on line 284
+[16-Feb-2018 09:26:26 UTC] PHP Parse error:  syntax error, unexpected '$route' (T_VARIABLE) in /home/windzoonin/public_html/crypto/application/x/config/routes.php on line 284
+[16-Feb-2018 10:55:28 UTC] PHP Parse error:  syntax error, unexpected '$this' (T_VARIABLE) in /home/windzoonin/public_html/crypto/application/x/views/ticket/comment_view.php on line 139
+[16-Feb-2018 10:55:42 UTC] PHP Parse error:  syntax error, unexpected '$this' (T_VARIABLE) in /home/windzoonin/public_html/crypto/application/x/views/ticket/comment_view.php on line 139
+[16-Feb-2018 11:15:37 UTC] PHP Parse error:  syntax error, unexpected '}' in /home/windzoonin/public_html/crypto/application/x/controllers/Ticket.php on line 240
+[16-Feb-2018 11:57:56 UTC] PHP Parse error:  syntax error, unexpected '}', expecting identifier (T_STRING) or variable (T_VARIABLE) or '{' or '$' in /home/windzoonin/public_html/crypto/application/x/controllers/Ticket.php on line 249
+[16-Feb-2018 11:58:16 UTC] PHP Parse error:  syntax error, unexpected '}', expecting identifier (T_STRING) or variable (T_VARIABLE) or '{' or '$' in /home/windzoonin/public_html/crypto/application/x/controllers/Ticket.php on line 249
+[16-Feb-2018 11:58:24 UTC] PHP Fatal error:  Call to a member function input() on null in /home/windzoonin/public_html/crypto/application/x/controllers/Ticket.php on line 238
+[16-Feb-2018 11:59:30 UTC] PHP Fatal error:  Call to a member function input() on null in /home/windzoonin/public_html/crypto/application/x/controllers/Ticket.php on line 238
+[17-Apr-2018 10:27:26 UTC] PHP Warning:  Unterminated comment starting line 559 in /home/wwsptech/public_html/travelolo/application/x/models/Admin_model.php on line 559
+[22-Nov-2018 10:45:24 UTC] PHP Fatal error:  Call to undefined function user_signup_email() in /home/windzoonin/public_html/dream_farm/application/x/controllers/Api.php on line 110
+[22-Nov-2018 10:48:31 UTC] PHP Fatal error:  Call to undefined function user_signup_email() in /home/windzoonin/public_html/dream_farm/application/x/controllers/Api.php on line 110
+[26-Nov-2018 07:14:56 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 14942238 bytes) in /home/windzoonin/public_html/dream_farm/application/x/controllers/Api.php on line 489
+[26-Nov-2018 07:20:38 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 14942238 bytes) in /home/windzoonin/public_html/dream_farm/application/x/controllers/Api.php on line 489
+[26-Nov-2018 08:10:55 UTC] PHP Fatal error:  Cannot redeclare Api::edit_profile() in /home/windzoonin/public_html/dream_farm/application/x/controllers/Api.php on line 557
+[26-Nov-2018 09:55:44 UTC] PHP Fatal error:  Call to undefined method Admin_model::get_booking_type() in /home/windzoonin/public_html/dream_farm/application/x/views/faq/faq_post.php on line 642
+[26-Nov-2018 09:56:15 UTC] PHP Fatal error:  Call to undefined method Admin_model::get_booking_type() in /home/windzoonin/public_html/dream_farm/application/x/views/faq/faq_post.php on line 642
+[26-Nov-2018 10:17:19 UTC] PHP Fatal error:  Call to undefined method Admin_model::get_stores() in /home/windzoonin/public_html/dream_farm/application/x/views/faq/faq_update.php on line 99
+[27-Nov-2018 05:37:57 UTC] PHP Fatal error:  Call to undefined method CI_DB_mysqli_result::result_arrray() in /home/windzoonin/public_html/dream_farm/application/x/controllers/Api.php on line 559
+[27-Nov-2018 05:41:23 UTC] PHP Fatal error:  Can't use function return value in write context in /home/windzoonin/public_html/dream_farm/application/x/controllers/Api.php on line 563
+[27-Nov-2018 05:41:48 UTC] PHP Fatal error:  Can't use function return value in write context in /home/windzoonin/public_html/dream_farm/application/x/controllers/Api.php on line 563
+[27-Nov-2018 05:43:26 UTC] PHP Parse error:  syntax error, unexpected '=' in /home/windzoonin/public_html/dream_farm/application/x/controllers/Api.php on line 563
+[01-Dec-2018 06:42:27 UTC] PHP Fatal error:  Call to undefined method Admin_model::get_store() in /home/windzoonin/public_html/dream_farm/application/x/views/role_permission/post.php on line 103
+[01-Dec-2018 06:42:41 UTC] PHP Fatal error:  Call to undefined method Admin_model::get_store() in /home/windzoonin/public_html/dream_farm/application/x/views/role_permission/post.php on line 103
+[01-Dec-2018 06:42:45 UTC] PHP Fatal error:  Call to undefined method Admin_model::get_store() in /home/windzoonin/public_html/dream_farm/application/x/views/role_permission/update.php on line 53
+[01-Dec-2018 06:44:03 UTC] PHP Fatal error:  Call to undefined method Admin_model::get_store() in /home/windzoonin/public_html/dream_farm/application/x/views/role_permission/post.php on line 103
+[01-Dec-2018 06:44:13 UTC] PHP Fatal error:  Call to undefined method Admin_model::get_store() in /home/windzoonin/public_html/dream_farm/application/x/views/role_permission/update.php on line 53
+[04-Dec-2018 04:48:48 UTC] PHP Fatal error:  [] operator not supported for strings in /home/windzoonin/public_html/dream_farm/application/x/controllers/Api.php on line 542
+[05-Dec-2018 10:34:09 UTC] PHP Fatal error:  Call to undefined method CI_DB_mysqli_result::limit() in /home/windzoonin/public_html/dream_farm/application/x/controllers/Api.php on line 805
+[05-Dec-2018 10:34:37 UTC] PHP Fatal error:  Call to undefined method CI_DB_mysqli_result::limit() in /home/windzoonin/public_html/dream_farm/application/x/controllers/Api.php on line 805
+[05-Dec-2018 10:34:39 UTC] PHP Fatal error:  Call to undefined method CI_DB_mysqli_result::limit() in /home/windzoonin/public_html/dream_farm/application/x/controllers/Api.php on line 805
+[05-Dec-2018 10:34:46 UTC] PHP Fatal error:  Call to undefined method CI_DB_mysqli_result::limit() in /home/windzoonin/public_html/dream_farm/application/x/controllers/Api.php on line 805
+[05-Dec-2018 10:35:37 UTC] PHP Fatal error:  Call to undefined method CI_DB_mysqli_result::limit() in /home/windzoonin/public_html/dream_farm/application/x/controllers/Api.php on line 805
+[05-Dec-2018 10:35:54 UTC] PHP Fatal error:  Call to undefined method CI_DB_mysqli_result::limit() in /home/windzoonin/public_html/dream_farm/application/x/controllers/Api.php on line 805
+[05-Dec-2018 10:36:53 UTC] PHP Fatal error:  Call to undefined method CI_DB_mysqli_result::limit() in /home/windzoonin/public_html/dream_farm/application/x/controllers/Api.php on line 805
+[05-Dec-2018 10:37:13 UTC] PHP Fatal error:  Call to undefined method CI_DB_mysqli_result::limit() in /home/windzoonin/public_html/dream_farm/application/x/controllers/Api.php on line 805
+[05-Dec-2018 10:37:31 UTC] PHP Fatal error:  Call to undefined method CI_DB_mysqli_result::limit() in /home/windzoonin/public_html/dream_farm/application/x/controllers/Api.php on line 805
+[05-Dec-2018 10:37:41 UTC] PHP Fatal error:  Call to undefined method CI_DB_mysqli_result::limit() in /home/windzoonin/public_html/dream_farm/application/x/controllers/Api.php on line 805

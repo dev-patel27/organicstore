@@ -1,0 +1,1320 @@
+<style type="text/css">/*Owl Animation*/
+.owl-item{
+    overflow: hidden;
+}
+
+%owl-animate{
+    .owl-stage{
+        transform: none !important;
+        width: 100% !important;
+        position: relative;
+        height: 0;
+        border: none;
+        overflow: hidden;
+        display: block;
+        padding-top: 31.25%; // 1600x500
+    }
+
+    .owl-item{
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0 !important;
+        left: 0 !important;
+        opacity: 0;
+        z-index: 10;
+
+        &.active{
+            z-index: 20;
+            opacity: 1;
+        }
+
+        &.owl-animated-out{
+            opacity: 1;
+        }
+
+        &.owl-animated-in{
+            opacity: 0;
+        }
+    }
+}
+
+
+/*****************************************/
+/* Soft Scale */
+/*****************************************/
+.fxSoftScale{
+    .animated{
+        animation-duration: 1s;
+        animation-fill-mode: forwards;
+        animation-timing-function: cubic-bezier(0.7, 0, 0.3, 1);
+    }
+}
+
+.fxSoftScaleOutNext {
+    animation-name: scaleUp;
+}
+
+.fxSoftScaleInNext {
+    animation-name: scaleDownUp;
+}
+
+.fxSoftScaleOutPrev {
+    animation-name: scaleDown;
+}
+
+.fxSoftScaleInPrev {
+    animation-name: scaleUpDown;
+}
+
+@keyframes scaleUp {
+    from {
+        opacity: 1;
+    }
+    to {
+        transform: scale(1.2);
+        opacity: 0;
+    }
+}
+
+@keyframes scaleDownUp {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes scaleDown {
+    from {}
+    to {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+}
+
+@keyframes scaleUpDown {
+    from {
+        transform: scale(1.2);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+
+/*****************************************/
+/* Press away */
+/*****************************************/
+.fxPressAway{
+    .animated{
+        animation-duration: 1s;
+        animation-fill-mode: forwards;
+        animation-timing-function: cubic-bezier(0.7, 0, 0.3, 1);
+    }
+}
+
+.fxPressAwayOutNext {
+    animation-name: slideOutScaleRight;
+}
+
+.fxPressAwayInNext {
+    animation-name: slideInFromLeft;
+}
+
+.fxPressAwayOutPrev {
+    animation-name: slideOutScaleLeft;
+}
+
+.fxPressAwayInPrev {
+    animation-name: slideInFromRight;
+}
+
+@keyframes slideOutScaleRight {
+    from {} 
+    to {
+        transform: translateX(100%) scale(0.9);
+        opacity: 0;
+    }
+}
+
+@keyframes slideInFromLeft {
+    from {
+        transform: translateX(-100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideOutScaleLeft {
+    from {} 
+    to {
+        transform: translateX(-100%) scale(0.9);
+        opacity: 0;
+    }
+}
+
+@keyframes slideInFromRight {
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+
+/*****************************************/
+/* Slide Swing */
+/*****************************************/
+.fxSideSwing{
+    .animated{
+        animation-duration: 1s;
+        animation-fill-mode: forwards;
+        animation-timing-function: cubic-bezier(1, -0.2, 0, 1);
+    }
+}
+
+.fxSideSwingOutNext {
+    animation-name: slideOutScaleRight;
+}
+
+.fxSideSwingInNext {
+    animation-name: slideInFromLeft;
+}
+
+.fxSideSwingOutPrev {
+    animation-name: slideOutScaleLeft;
+}
+
+.fxSideSwingInPrev {
+    animation-name: slideInFromRight;
+}
+
+
+/*****************************************/
+/* Fortune wheel */
+/*****************************************/
+.fxFortuneWheel {
+    .owl-stage{
+        perspective: 1600px;
+    }
+
+    .animated{
+        animation-duration: 1s;
+        animation-fill-mode: forwards;
+        animation-timing-function: cubic-bezier(0.7, 0, 0.3, 1);
+    }
+}
+
+.fxFortuneWheelOutNext {
+    animation-name: slideOutScaleRight;
+}
+
+.fxFortuneWheelInNext {
+    transform-origin: 100% 50%;
+    animation-name: rotateInFromLeft;
+}
+
+.fxFortuneWheelOutPrev {
+    animation-name: slideOutScaleLeft;
+}
+
+.fxFortuneWheelInPrev {
+    transform-origin: 0% 50%;
+    animation-name: rotateInFromRight;
+}
+
+@keyframes rotateInFromLeft {
+    from {
+        transform: translateX(-100%) rotateY(-55deg);
+    }
+    to {
+        transform: translateX(0) rotateY(0deg);
+        opacity: 1;
+    }
+}
+
+@keyframes rotateInFromRight {
+    from {
+        transform: translateX(100%) rotateY(55deg);
+    }
+    to {
+        transform: translateX(0) rotateY(0deg);
+        opacity: 1;
+    }
+}
+
+
+/*****************************************/
+/* Swipe */
+/*****************************************/
+$owl-swipe: 0.8s forwards ease-in-out;
+
+.fxSwipe{
+    @extend %owl-animate;
+
+    .owl-item{
+        &.fxSwipeOutNext{
+            z-index: 30;
+        }
+
+        &.fxSwipeInPrev{
+            opacity: 1
+        }
+    }
+}
+
+.fxSwipeOutNext {
+    animation: decreaseHeight $owl-swipe;
+}
+
+.fxSwipeInNext {
+    animation: show $owl-swipe;
+}
+
+.fxSwipeOutPrev {
+    animation: hide $owl-swipe;
+}
+
+.fxSwipeInPrev {
+    animation: increaseHeight $owl-swipe;
+}
+
+@keyframes increaseHeight {
+    from {
+        height: 0;
+    }
+    to {
+        height: 100%;
+    }
+}
+
+@keyframes decreaseHeight {
+    from {}
+    to {
+        height: 0;
+    }
+}
+
+@keyframes show {
+    0% {
+        opacity: 0;
+    }
+    1%,100% {
+        opacity: 1;
+    }
+}
+
+@keyframes hide {
+    0%,99% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+
+/*****************************************/
+/* Push reveal */
+/*****************************************/
+.fxPushReveal{
+    @extend %owl-animate;
+
+    .owl-item.animated{
+        opacity: 1;
+        animation-duration: 0.7s;
+        animation-fill-mode: forwards;
+        animation-timing-function: ease-in-out;
+    }
+}
+
+.fxPushRevealOutNext {
+    animation-name: slideOutBottom;
+}
+
+.fxPushRevealInNext {
+    animation-name: slideInHalfFromTop;
+
+    .fxPushReveal &.owl-item{
+        z-index: 5;
+    }
+}
+
+.fxPushRevealOutPrev {
+    animation-name: slideOutHalfTop;
+}
+
+.fxPushRevealInPrev {
+    animation-name: slideInFromBottom;
+}
+
+@keyframes slideOutBottom {
+    from {} 
+    to {
+        transform: translateY(100%);
+    }
+}
+
+@keyframes slideInHalfFromTop {
+    from {
+        transform: translateY(-50%);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideOutHalfTop {
+    from {} 
+    to {
+        transform: translateY(-50%);
+    }
+}
+
+@keyframes slideInFromBottom {
+    from {
+        transform: translateY(100%);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+
+/*****************************************/
+/* Snap in */
+/*****************************************/
+.fxSnapIn{
+    @extend %owl-animate;
+
+    .owl-item{
+        &:after{
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            pointer-events: none;
+            background-color: rgba(0,0,0,0.8);
+            transition: opacity 0.4s 0.1s ease-in;
+        }
+
+        &.owl-animated-out{
+            &:after{
+                opacity: 1;
+            }
+        }
+
+        &.owl-animated-in{
+            opacity: 1;
+        }
+    }
+
+    .animated{
+        animation-duration: 0.5s;
+        animation-fill-mode: forwards;
+    }
+
+    .owl-animated-in{
+        animation-timing-function: ease-in;
+    }
+
+    .owl-animated-out{
+        animation-timing-function: cubic-bezier(0.7, 0, 0.3, 1);
+    }
+}
+
+.fxSnapInOutNext {
+    animation-name: slideOutLeft;
+}
+
+.fxSnapInInNext {
+    animation-name: slideFromRightFast;
+}
+
+.fxSnapInOutPrev {
+    animation-name: slideOutRight;
+}
+
+.fxSnapInInPrev {
+    animation-name: slideFromLeftFast;
+}
+
+@keyframes slideOutLeft {
+    from {} 
+    to {
+        transform: translateX(-10%);
+    }
+}
+
+@keyframes slideFromRightFast {
+    0%,50% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(0%);
+    }
+}
+
+@keyframes slideOutRight {
+    from {} 
+    to {
+        transform: translateX(10%);
+    }
+}
+
+@keyframes slideFromLeftFast {
+    0%,50% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(0%);
+    }
+}
+
+/*****************************************/
+/* Let me in */
+/*****************************************/
+
+.fxLetMeIn {
+    @extend %owl-animate;
+
+    .owl-stage{
+        perspective: 1600px;
+    }
+
+    .owl-item {
+        &:after{
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            pointer-events: none;
+            background-color: rgba(0,0,0,0.6);
+            transition: opacity 0.5s ease-in-out;
+        }
+
+        &.fxLetMeInOutNext,
+        &.fxLetMeInOutPrev{
+            &:after {
+                opacity: 1;
+            }
+        }
+
+        &.fxLetMeInInNext,
+        &.fxLetMeInInPrev{
+            z-index: 30;
+            opacity: 1;
+        }
+    }
+}
+
+.fxLetMeInOutNext {
+    transform-origin: 0% 50%;
+    animation: rotateOutRight 0.5s forwards ease-in-out;
+}
+
+.fxLetMeInInNext {
+    animation: slideFromRightFast 0.5s forwards ease;
+}
+
+.fxLetMeInOutPrev {
+    transform-origin: 100% 0%;
+    animation: rotateOutLeft 0.5s forwards ease-in-out;
+}
+
+.fxLetMeInInPrev {
+    animation: slideFromLeftFast 0.5s forwards ease;
+}
+
+@keyframes rotateOutRight {
+    from {} 
+    to {
+        transform: rotateY(10deg);
+    }
+}
+
+@keyframes rotateOutLeft {
+    from {} 
+    to {
+        transform: rotateY(-10deg);
+    }
+}
+
+/*****************************************/
+/* Stick it */
+/*****************************************/
+
+.fxStickIt{
+    @extend %owl-animate;
+
+    .owl-stage{
+        perspective: 1600px;
+    }
+
+    .owl-item{
+        &.fxStickItInNext{
+            opacity: 1;
+        }
+    }
+}
+
+.fxStickItOutNext {
+    transform-origin: 50% 0%;
+    animation: rotateBottomSideOut 0.8s forwards ease-in;
+}
+
+.fxStickItInNext {
+    animation: slideInFromBottomDelayed 0.8s forwards;
+}
+
+.fxStickItOutPrev {
+    opacity: 1;
+    animation: slideOutToBottom 0.8s forwards;
+}
+
+.fxStickItInPrev {
+    transform-origin: 50% 0%;
+    animation: rotateBottomSideIn 0.8s 0.1s forwards ease-in;
+}
+
+@keyframes rotateBottomSideOut {
+    from {} 
+    40% {
+        transform: rotateX(-15deg);
+        animation-timing-function: ease-out;
+    }
+    100% {
+        opacity: 0;
+        transform: scale(0.8) translateZ(-200px);
+    }
+}
+
+@keyframes slideInFromBottomDelayed {
+    0%, 30% {
+        transform: translateY(100%);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes rotateBottomSideIn {
+    0% {
+        opacity: 0;
+        transform: scale(0.8) translateZ(-200px);
+    }
+    60% {
+        transform: scale(1) translateZ(0) rotateX(-15deg);
+        animation-timing-function: ease-out;
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1) translateZ(0) rotateX(0deg);
+    }
+}
+
+/*****************************************/
+/* Archive me */
+/*****************************************/
+$owl-archive-me: 0.7s cubic-bezier(0.7, 0, 0.3, 1) !default;
+
+.fxArchiveMe{
+    .owl-item{
+        &:before,
+        &:after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            background-color: rgba(0,0,0,0.7);
+            transition: opacity $owl-archive-me;
+        }
+
+        &.fxArchiveMeInNext{
+            z-index: 30;
+            opacity: 1;
+
+            &:after{
+                transition: none;
+            }
+        }
+
+        &:after,
+        &.fxArchiveMeOutNext:before {
+            opacity: 1;
+        }
+
+        &:before,
+        &.active:after,
+        &.fxArchiveMeInNext:after,
+        &.fxArchiveMeInPrev:after {
+            opacity: 0;
+        }
+    }
+}
+
+.fxArchiveMeOutNext {
+    animation: scaleHalfDown $owl-archive-me;
+}
+
+.fxArchiveMeInNext {
+    animation: slideInFromBottom $owl-archive-me;
+}
+
+.fxArchiveMeOutPrev {
+    animation: slideOutToBottom $owl-archive-me;
+}
+
+.fxArchiveMeInPrev {
+    animation: scaleHalfUp $owl-archive-me;
+}
+
+@keyframes scaleHalfDown {
+    from {} 
+    to {
+        transform: scale(0.6);
+        opacity: 0;
+    }
+}
+
+@keyframes slideOutToBottom {
+    from {} 
+    to {
+        transform: translateY(100%);
+    }
+}
+
+@keyframes scaleHalfUp {
+    from {
+        opacity: 0;
+        transform: scale(0.6);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+
+/*****************************************/
+/* Vertical growth */
+/*****************************************/
+$owl-fxVGrowth: 0.6s forwards cubic-bezier(0.6, 0, 0.4, 1) !default;
+
+.fxVGrowth{
+    .owl-item{
+        &.fxVGrowthInNext,
+        &.fxVGrowthInPrev{
+            z-index: 30;
+            opacity: 1;
+        }
+    }
+}
+
+.fxVGrowthOutNext {
+    animation: scaleDown $owl-fxVGrowth;
+}
+
+.fxVGrowthInNext {
+    transform-origin: 50% 100%;
+    animation: maximize $owl-fxVGrowth;
+}
+
+.fxVGrowthOutPrev {
+    animation: scaleDown $owl-fxVGrowth;
+}
+
+.fxVGrowthInPrev {
+    transform-origin: 50% 0%;
+    animation: maximize $owl-fxVGrowth;
+}
+
+@keyframes maximize {
+    from {
+        transform: scale(0);
+    }
+    to {
+        transform: scale(1);
+    }
+}
+
+
+/*****************************************/
+/* Slide Behind */
+/* From https://github.com/hakimel/kontext by Hakim El Hattab, http://hakim.se */
+/*****************************************/
+$owl-slideBehind: 0.8s forwards !default;
+
+.fxSlideBehind{
+    @extend %owl-animate;
+
+    .owl-stage{
+        perspective: 1000px;
+    }
+}
+
+.fxSlideBehindOutNext {
+    animation: hideLeft $owl-slideBehind;
+}
+
+.fxSlideBehindInNext {
+    animation: showRight $owl-slideBehind;
+}
+
+.fxSlideBehindOutPrev {
+    animation: hideRight $owl-slideBehind;
+}
+
+.fxSlideBehindInPrev {
+    animation: showLeft $owl-slideBehind;
+}
+
+@keyframes hideLeft {
+    0% {
+        transform: translateZ( 0px );
+    }
+    40% {
+        transform: translate( 0, -40% ) scale( 0.8 ) rotateX( -20deg );
+        z-index: 30;
+    }
+    100% {
+        opacity: 1;
+        transform: translateZ( -400px );
+    }
+}
+
+@keyframes showRight {
+    0% {
+        transform: translateZ( -400px );
+        opacity: 1;
+    }
+    40% {
+        transform: translate( 0, 40% ) scale( 0.8 ) rotateX( 20deg );
+        opacity: 1;
+    }
+    41% {
+        transform: translate( 0, 40% ) scale( 0.8 ) rotateX( 20deg );
+        opacity: 1;
+        z-index: 30;
+    }
+    100% {
+        transform: translateZ( 0px );
+        opacity: 1;
+        z-index: 30;
+    }
+}
+
+@keyframes hideRight {
+    0% {
+        transform: translateZ( 0px );
+    }
+    40% {
+        transform: translate( 0, 40% ) scale( 0.8 ) rotateX( 20deg );
+        z-index: 30;
+    }
+    100% {
+        opacity: 1;
+        transform: translateZ( -400px );
+    }
+}
+
+@keyframes showLeft {
+    0% {
+        transform: translateZ( -400px );
+        opacity: 1;
+    }
+    40% {
+        transform: translate( 0, -40% ) scale( 0.8 ) rotateX( -20deg );
+        opacity: 1;
+    }
+    41% {
+        transform: translate( 0, -40% ) scale( 0.8 ) rotateX( -20deg );
+        opacity: 1;
+        z-index: 30;
+    }
+    100% {
+        transform: translateZ( 0px );
+        opacity: 1;
+        z-index: 30;
+    }
+}
+
+
+/*****************************************/
+/* Soft Pulse */
+/*****************************************/
+
+.fxSoftPulseOutPrev,
+.fxSoftPulseOutNext {
+    animation: scaleUpFadeOut 0.8s forwards ease-in;
+}
+
+.fxSoftPulseInPrev,
+.fxSoftPulseInNext {
+    animation: scaleDownFadeIn 0.8s forwards ease-out;
+}
+
+@keyframes scaleUpFadeOut {
+    from {} 
+    50% {
+        transform: scale(1.2);
+        opacity: 1;
+    }
+    75% {
+        transform: scale(1.1);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 0;
+    }
+}
+
+@keyframes scaleDownFadeIn {
+    from {} 
+    50% {
+        opacity: 1;
+        transform: scale(1.2);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+
+/*****************************************/
+/* Earthquake */
+/* From https://elrumordelaluz.github.io/csshake/ by Lionel, http://t.co/thCECnx1Yg */
+/*****************************************/
+
+.fxEarthquake{
+    .owl-item{
+        &:after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            pointer-events: none;
+            background-color: rgba(0,0,0,0.3);
+            transition: opacity 0.5s;
+        }
+
+        &:after,
+        &:after {
+            opacity: 1;
+        }
+
+        &.fxEarthquakeInPrev{
+            opacity: 1;
+        }
+    }
+}
+
+.fxEarthquakeOutNext {
+    animation: shakeSlideBottom 1s 0.1s forwards;
+}
+
+.fxEarthquakeInNext {
+    animation: pushFromTop 1s 0.1s forwards;
+}
+
+.fxEarthquakeOutPrev {
+    animation: shakeSlideTop 1s 0.1s forwards;
+}
+
+.fxEarthquakeInPrev{
+    animation: pushFromBottom 1s 0.1s forwards;
+}
+
+@keyframes shakeSlideBottom {
+    0% { transform: translate(0px, 0px) rotate(0deg); }
+    2% { transform: translate(-1px, -1px) rotate(-0.5deg); }
+    4% { transform: translate(-1px, -1px) rotate(-0.5deg); }
+    6% { transform: translate(0px, 0px) rotate(-0.5deg); }
+    8% { transform: translate(-1px, -1px) rotate(-0.5deg); }
+    10% { transform: translate(-1px, -1px) rotate(-0.5deg); }
+    12% { transform: translate(0px, 0px) rotate(-0.5deg); }
+    14% { transform: translate(-1px, -1px) rotate(-0.5deg); }
+    16% { transform: translate(0px, 0px) rotate(-0.5deg); }
+    18% { transform: translate(0px, -1px) rotate(-0.5deg); }
+    20% { transform: translate(0px, -1px) rotate(-0.5deg); }
+    22% { transform: translate(0px, -1px) rotate(-0.5deg); }
+    24% { transform: translate(-1px, 0px) rotate(-0.5deg); }
+    26% { transform: translate(0px, 0px) rotate(-0.5deg); }
+    28% { transform: translate(-1px, 0px) rotate(-0.5deg); }
+    30% { transform: translate(0px, -1px) rotate(-0.5deg); }
+    32% { transform: translate(-1px, 0px) rotate(-0.5deg); }
+    34% { transform: translate(0px, -1px) rotate(-0.5deg); }
+    36% { transform: translate(0px, 0px) rotate(-0.5deg); }
+    38% { transform: translate(-1px, -1px) rotate(-0.5deg); }
+    40% { transform: translate(0px, 0px) rotate(-0.5deg); }
+    42% { transform: translate(-1px, 0px) rotate(-0.5deg); }
+    44% { transform: translate(0px, -1px) rotate(-0.5deg); }
+    46% { transform: translate(-1px, -1px) rotate(-0.5deg); }
+    48% { transform: translate(-1px, -1px) rotate(-0.5deg); }
+    50% { transform: translate(0px, -1px) rotate(-0.5deg); }
+    52% { transform: translate(-1px, 0px) rotate(-0.5deg); }
+    54% { transform: translate(0px, -1px) rotate(-0.5deg); }
+    56% { transform: translate(-1px, -1px) rotate(-0.5deg); }
+    58% { transform: translate(0px, 0px) rotate(-0.5deg); }
+    60% { transform: translate(-1px, 0px) rotate(-0.5deg); }
+    62% { transform: translate(-1px, -1px) rotate(-0.5deg); }
+    64% { transform: translate(0px, -1px) rotate(-0.5deg); }
+    66% { transform: translate(-1px, -1px) rotate(-0.5deg); }
+    68% { transform: translate(-1px, 0px) rotate(-0.5deg); }
+    70% { transform: translate(0px, 0px) rotate(-0.5deg); }
+    100% { transform: translateY(100%); }
+}
+
+@keyframes pushFromTop {
+    0%, 70% {
+        opacity: 0;
+        transform: translateY(-100%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes shakeSlideTop {
+    0% { transform: translate(0px, 0px) rotate(0deg); }
+    2% { transform: translate(-1px, -1px) rotate(-0.5deg); }
+    4% { transform: translate(-1px, -1px) rotate(-0.5deg); }
+    6% { transform: translate(0px, 0px) rotate(-0.5deg); }
+    8% { transform: translate(-1px, -1px) rotate(-0.5deg); }
+    10% { transform: translate(-1px, -1px) rotate(-0.5deg); }
+    12% { transform: translate(0px, 0px) rotate(-0.5deg); }
+    14% { transform: translate(-1px, -1px) rotate(-0.5deg); }
+    16% { transform: translate(0px, 0px) rotate(-0.5deg); }
+    18% { transform: translate(0px, -1px) rotate(-0.5deg); }
+    20% { transform: translate(0px, -1px) rotate(-0.5deg); }
+    22% { transform: translate(0px, -1px) rotate(-0.5deg); }
+    24% { transform: translate(-1px, 0px) rotate(-0.5deg); }
+    26% { transform: translate(0px, 0px) rotate(-0.5deg); }
+    28% { transform: translate(-1px, 0px) rotate(-0.5deg); }
+    30% { transform: translate(0px, -1px) rotate(-0.5deg); }
+    32% { transform: translate(-1px, 0px) rotate(-0.5deg); }
+    34% { transform: translate(0px, -1px) rotate(-0.5deg); }
+    36% { transform: translate(0px, 0px) rotate(-0.5deg); }
+    38% { transform: translate(-1px, -1px) rotate(-0.5deg); }
+    40% { transform: translate(0px, 0px) rotate(-0.5deg); }
+    42% { transform: translate(-1px, 0px) rotate(-0.5deg); }
+    44% { transform: translate(0px, -1px) rotate(-0.5deg); }
+    46% { transform: translate(-1px, -1px) rotate(-0.5deg); }
+    48% { transform: translate(-1px, -1px) rotate(-0.5deg); }
+    50% { transform: translate(0px, -1px) rotate(-0.5deg); }
+    52% { transform: translate(-1px, 0px) rotate(-0.5deg); }
+    54% { transform: translate(0px, -1px) rotate(-0.5deg); }
+    56% { transform: translate(-1px, -1px) rotate(-0.5deg); }
+    58% { transform: translate(0px, 0px) rotate(-0.5deg); }
+    60% { transform: translate(-1px, 0px) rotate(-0.5deg); }
+    62% { transform: translate(-1px, -1px) rotate(-0.5deg); }
+    64% { transform: translate(0px, -1px) rotate(-0.5deg); }
+    66% { transform: translate(-1px, -1px) rotate(-0.5deg); }
+    68% { transform: translate(-1px, 0px) rotate(-0.5deg); }
+    70% { transform: translate(0px, 0px) rotate(-0.5deg); }
+    100% { transform: translateY(-100%); }
+}
+
+@keyframes pushFromBottom {
+    0%, 70% {
+        opacity: 0;
+        transform: translateY(100%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/*****************************************/
+/* Cliff diving */
+/*****************************************/
+$owl-fxCliffDiving: 0.9s cubic-bezier(0.7, 0, 0.3, 1) !default;
+
+.fxCliffDiving{
+    .owl-item{
+        transform-origin: 50% 400%;
+
+        &:after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            pointer-events: none;
+            background-color: rgba(0,0,0,1);
+            transition: opacity $owl-fxCliffDiving;
+        }
+
+        &.fxCliffDivingInNext,
+        &.fxCliffDivingInPrev{
+            opacity: 1;
+        }
+    }
+}
+
+.fxCliffDivingOutNext {
+    animation: rotateOutCircLeft $owl-fxCliffDiving;
+}
+
+.fxCliffDivingInNext {
+    animation: rotateInCircRight $owl-fxCliffDiving;
+}
+
+.fxCliffDivingOutPrev {
+    animation: rotateOutCircRight $owl-fxCliffDiving;
+}
+
+.fxCliffDivingInPrev {
+    animation: rotateInCircLeft $owl-fxCliffDiving;
+}
+
+@keyframes rotateOutCircLeft {
+    from {} 
+    to {
+        transform: rotate(-20deg) translateX(-100%);
+    }
+}
+
+@keyframes rotateInCircRight {
+    from {
+        transform: rotate(20deg) translateX(100%);
+    }
+    to {
+        transform: rotate(0deg) translateX(0);
+    }
+}
+
+@keyframes rotateOutCircRight {
+    from {} 
+    to {
+        transform: rotate(20deg) translateX(100%);
+    }
+}
+
+@keyframes rotateInCircLeft {
+    from {
+        transform: rotate(-20deg) translateX(-100%);
+    }
+    to {
+        transform: rotate(0deg) translateX(0);
+    }
+}
+
+
+
+
+
+// Common styles
+// ====================================
+body{
+    font: 16px/1.5 Verdana, sans-serif;
+    color: #333;
+    background-color: #fff;
+}
+
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+.owl-nav{
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    text-align: left !important;
+    margin-top: 0;
+    height: 0;
+
+    [class*=owl-]{
+        transform: translateY(-50%);
+        margin: 0 20px !important;
+        padding: 8px 14px !important;
+    }
+}
+
+.owl-next{
+    float: right;
+}
+
+.owl-dots{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+
+    .owl-dot span{
+        width: 14px !important;
+        height: 14px !important;
+    }
+}
+
+.owl-carousel{
+    margin-bottom: 10px;
+    background-color: #333;
+}
+
+select{
+    font: inherit;
+    padding: 10px;
+}</style>
+<div class="container">
+    <div class="owl-carousel owl-theme fxSoftScale">
+        <div class="item">
+            <img src="http://placehold.it/1600x500/238f45/ffffff" />
+        </div>
+        <div class="item">
+            <img src="http://placehold.it/1600x500/255585/ffffff" />
+        </div>
+        <div class="item">
+            <img src="http://placehold.it/1600x500/2fd585/ffffff" />
+        </div>
+        <div class="item">
+            <img src="http://placehold.it/1600x500/ff6fd5/ffffff" />
+        </div>
+        <div class="item">
+            <img src="http://placehold.it/1600x500/8d1825/ffffff" />
+        </div>
+    </div>
+
+    <!--for demo-->
+    <div class="custom-select">
+        <select id="fxselect">
+            <option value="fxSoftScale">Soft scale</option>
+            <option value="fxPressAway">Press away</option>
+            <option value="fxSideSwing">Side Swing</option>
+            <option value="fxFortuneWheel">Fortune wheel</option>
+            <option value="fxSwipe">Swipe</option>
+            <option value="fxPushReveal">Push reveal</option>
+            <option value="fxSnapIn">Snap in</option>
+            <option value="fxLetMeIn">Let me in</option>
+            <option value="fxStickIt">Stick it</option>
+            <option value="fxArchiveMe">Archive me</option>
+            <option value="fxVGrowth">Vertical growth</option>
+            <option value="fxSlideBehind">Slide Behind</option>
+            <option value="fxSoftPulse">Soft Pulse</option>
+            <option value="fxEarthquake">Earthquake</option>
+            <option value="fxCliffDiving">Cliff diving</option>
+        </select>
+    </div>
+</div>
+<script>$(function () {
+  var $owl = $('.owl-carousel'),
+      effect = getAnimationName(),
+      outIndex,
+      isDragged = false;
+
+  $owl.owlCarousel({
+    margin: 0,
+    navSpeed: 500,
+    nav: true,
+    items: 1,
+    animateIn: 'fake',
+    animateOut: 'fake'
+  });
+
+  $owl.on('change.owl.carousel', function(event) {
+    outIndex = event.item.index;
+  });
+
+  $owl.on('changed.owl.carousel', function(event) {
+    var inIndex = event.item.index,
+        dir = outIndex <= inIndex ? 'Next' : 'Prev';
+
+    var animation = {
+      moveIn: {
+        item: $('.owl-item', $owl).eq(inIndex),
+        effect: effect + 'In' + dir
+      },
+      moveOut: {
+        item: $('.owl-item', $owl).eq(outIndex),
+        effect: effect + 'Out' + dir
+      },
+      run: function (type) {
+        var animationEndEvent = 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend',
+            animationObj = this[type],
+            inOut = type == 'moveIn' ? 'in' : 'out',
+            animationClass = 'animated owl-animated-' + inOut + ' ' + animationObj.effect,
+            $nav = $owl.find('.owl-prev, .owl-next, .owl-dot, .owl-stage');
+
+        $nav.css('pointerEvents', 'none');
+
+        animationObj.item.stop().addClass(animationClass).one(animationEndEvent, function () {
+          // remove class at the end of the animations
+          animationObj.item.removeClass(animationClass);
+          $nav.css('pointerEvents', 'auto');
+        });
+      }
+    };
+
+    if (!isDragged){
+      animation.run('moveOut');
+      animation.run('moveIn');
+    }
+  });
+
+  $owl.on('drag.owl.carousel', function(event) {
+    isDragged = true;
+  });
+
+  $owl.on('dragged.owl.carousel', function(event) {
+    isDragged = false;
+  });
+
+  /**
+   * Get Animation Name from the class 'owl-carousel',
+   * animation name begins with fx...
+   */
+  function getAnimationName(){
+    var re = /fx[a-zA-Z0-9\-_]+/i,
+        matches = re.exec($owl.attr('class'));
+
+    return matches !== null ? matches[0] : matches;
+  }
+
+
+  /**
+   * For Demo (Selectbox)
+   * Change select options with animation name
+   */
+  $('#fxselect').on('change', function (e) {
+    var $owlCarousel = $('.owl-carousel'),
+        animationName = getAnimationName();
+    effect = $(this).find('option:selected').val();
+
+    //remove old root class
+    if (animationName !== null){
+      $owl.removeClass(animationName);
+    }
+
+    //add new root class
+    $owlCarousel.addClass(effect);
+  });
+});
+</script>

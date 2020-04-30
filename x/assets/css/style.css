@@ -1,0 +1,42 @@
+.radio-toolbar input[type="radio"] {
+    display:none;
+}
+.radio-toolbar .radio {
+    display:none;
+}
+
+.radio-toolbar label {
+    display:inline-block;
+    background-color:#ddd;
+    padding:10px 15px;
+    margin-right: 10px;
+}
+
+.portlet-title.line-border {
+    border-bottom: 2px solid #eee !important;
+}
+
+.col-md-1_5 {
+    width: 13% !important;
+}
+
+.checked-radio {
+    background: none repeat scroll 0 0 #ed6b75 !important;
+    color: #fff;
+}
+.padding-all7{
+    padding: 7px !important;
+}
+.datatable-icon{
+    float: left;
+    font-size: 22px !important;
+    padding: 0;
+    width: 22px;
+}
+
+.btn.btn-white.white-haze {
+    border-color: #b4bcc8;
+    color: #b4bcc8;
+    background: 0 0;
+    margin-top: 5px;
+}
